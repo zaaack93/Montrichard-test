@@ -1,0 +1,10 @@
+src/
+node_modules/
+src/**
+devops/**
+node_modules/**
+package.json
+package-lock.json
+mix-manifest.json
+webpack.mix.js
+.DS_Store
