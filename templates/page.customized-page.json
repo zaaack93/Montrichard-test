@@ -11,13 +11,61 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "multirow_CWXgTA": {
+      "type": "multirow",
+      "blocks": {
+        "row_LgpmVr": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/C6A0053.png",
+            "caption": "",
+            "heading": "The 70s golden age of military watches revived.",
+            "text": "<p>The H-75 belongs to some of the last generations of mechanical chronographs used in modern militaries. Guided by operational requirements, the oversized “arrow” chronograph second hand & oversized hour indexes both serve to ensure extreme legibility in all conditions.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_aWM4KL": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/C6A0441.png",
+            "caption": "",
+            "heading": "Usability in all conditions.",
+            "text": "<p>Over-sized chronograph pushers & a notched bezel are two distinct design choices made to guarantee the H-75’s usability with aviation or field gloves.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_LgpmVr",
+        "row_aWM4KL"
+      ],
+      "settings": {
+        "image_height": "adapt",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 68
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multirow_CWXgTA"
   ]
 }
