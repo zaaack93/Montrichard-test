@@ -17,6 +17,38 @@
         "padding_bottom": 28
       }
     },
+    "rich_text_6RJCHC": {
+      "type": "rich-text",
+      "blocks": {
+        "caption_Ke4HQU": {
+          "type": "caption",
+          "settings": {
+            "caption": "THE H-75 CHRONOGRAPH",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "heading_iCCgwQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rugged & Field-Tested",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "caption_Ke4HQU",
+        "heading_iCCgwQ"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-d8bc9ed3-314c-43b2-8096-cbf33c30c18f",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "multirow_CWXgTA": {
       "type": "multirow",
       "blocks": {
@@ -59,13 +91,14 @@
         "mobile_content_alignment": "left",
         "section_color_scheme": "scheme-d8bc9ed3-314c-43b2-8096-cbf33c30c18f",
         "row_color_scheme": "scheme-d8bc9ed3-314c-43b2-8096-cbf33c30c18f",
-        "padding_top": 60,
+        "padding_top": 0,
         "padding_bottom": 68
       }
     }
   },
   "order": [
     "main",
+    "rich_text_6RJCHC",
     "multirow_CWXgTA"
   ]
 }
