@@ -1,1 +1,10 @@
-
+@media screen and (min-width: 990px) {
+  .section--multirow .image-with-text__grid .grid__item:nth-child(2) .image-with-text__content {
+    padding-left: 110px;
+  }
+}
+@media screen and (min-width: 990px) {
+  .section--multirow .image-with-text__grid.image-with-text__grid--reverse .grid__item:nth-child(2) .image-with-text__content {
+    padding-left: 68px;
+  }
+}

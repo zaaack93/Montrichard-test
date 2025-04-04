@@ -1,2 +1,21 @@
 .section--multirow{
+    .image-with-text__grid{
+        .grid__item:nth-child(2) {
+            @media screen and (min-width: 990px) {
+            .image-with-text__content {
+                padding-left: 110px;
+            }
+            }
+        }
+    }
+
+    .image-with-text__grid.image-with-text__grid--reverse{
+        .grid__item:nth-child(2) {
+            @media screen and (min-width: 990px) {
+            .image-with-text__content {
+                padding-left: 68px;
+            }
+            }
+        }
+    }
 }
