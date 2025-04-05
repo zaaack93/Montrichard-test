@@ -1,0 +1,146 @@
+.section--featured-collection {
+    .collection__title {
+        margin-bottom: 50px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media screen and (max-width: 768px) {
+            padding-inline: 33px;
+            margin-bottom: 23px !important;
+        }
+
+        .title {
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 0px !important;
+            @media screen and (max-width: 768px) {
+                font-size: 32px;
+            }
+        }
+
+        .collection__view-all{
+            font-weight: 700;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    products-swiper-component{
+        display: block;
+        .swiper-container{
+            padding-left: 5rem;
+            @media screen and (max-width: 768px) {
+                padding-inline: 33px;
+            }
+        }
+
+        .product-card-wrapper{
+            .card__content{
+                .card__information{
+                    padding-block: 25px 0px;
+                    @media screen and (max-width: 768px) {
+                        padding-top: 17px;
+                    }
+
+                    .card__heading {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        @media screen and (max-width: 768px) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .card-information{
+                        .price  {
+                            margin-top: 14px;
+                            @media screen and (max-width: 768px) {
+                                margin-top: 3px;
+                            }
+                            .price__container{
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                                font-size: 14px;
+                                @media screen and (max-width: 768px) {
+                                    font-size: 12px;
+                                }
+                                s{
+                                    font-size: 14px;
+                                    color: #C4C4C4;
+                                    @media screen and (max-width: 768px) {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .card__badge {
+            display: none;
+        }
+
+        .progreess-bar-container{
+            width: 100%;
+            max-width: 1640px;
+            margin-inline: auto;
+            padding-inline: 5rem;
+            @media screen and (max-width: 768px) {
+                padding-inline: 33px;
+            }
+        }
+
+        .swiper-scrollbar{
+            position: relative;
+            margin-top: 70px;
+            left: 10px;
+            height: 2px;
+            background-color: #E3E3E3;
+            width: 100%;
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                left: 0;
+                margin-top: 25px;
+            }
+            .swiper-scrollbar-drag{
+                display: inherit;
+                background-color: #020D1D;
+                top: 0px;
+                position: relative;
+                height: 2px;
+            }
+        }
+
+        .swiper-pagination-container{
+            .swiper-button-prev,.swiper-button-next{
+                color:#000;
+                width: 24px;
+                height: 24px;
+                --swiper-navigation-sides-offset: 44px;
+                &::after{
+                    font-size: 16px;
+                }
+
+            }
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
+        }
+    }
+     
+}
+    @media screen and (min-width: 750px) {
+        .page-width {
+            padding: 0 5rem;
+        }
+    }   
+
+
+   

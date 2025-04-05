@@ -37,6 +37,10 @@
     <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
 
+    <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'main.js' | asset_url }}" defer></script>
+   
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -259,6 +263,7 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'main.css' | asset_url | stylesheet_tag }}
+    {{- 'swiper-bundle.min.css' | asset_url | stylesheet_tag: preload: true -}}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
