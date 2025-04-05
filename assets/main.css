@@ -8,6 +8,22 @@
     padding-left: 68px;
   }
 }
+@media screen and (max-width: 768px) {
+  .section--multirow .image-with-text__content {
+    padding-block: 32px 35px;
+  }
+}
+.section--multirow .image-with-text__content .image-with-text__text {
+  margin-top: 25px;
+  font-size: 36px;
+  line-height: normal;
+}
+@media screen and (max-width: 768px) {
+  .section--multirow .image-with-text__content .image-with-text__text {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
 
 .section--rich-text .rich-text__wrapper .rich-text__caption {
   color: #E87E3F;
@@ -34,11 +50,6 @@
   font-weight: 700;
   line-height: normal;
   margin-bottom: 0px !important;
-}
-@media screen and (max-width: 768px) {
-  .section--featured-collection .collection__title .title {
-    font-size: 32px;
-  }
 }
 .section--featured-collection .collection__title .collection__view-all {
   font-weight: 700;
