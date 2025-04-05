@@ -85,20 +85,22 @@
         </div>
       {%- endif -%}
 
-      {%- if section.settings.show_view_all and more_in_collection -%}
+      {%- if section.settings.show_view_all and more_in_collection and section.settings.view_all_text != blank -%}
         <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           <a
             href="{{ section.settings.collection.url }}"
             class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
             aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
           >
-            {{ 'sections.featured_collection.view_all' | t }}
+            {{ section.settings.view_all_text }}
           </a>
         </div>
       {%- endif -%}
     </div>
 
-    <products-swiper-component class="{% if section.settings.full_width %} slider-component-full-width{% endif %}">
+    <products-swiper-component class="{% if section.settings.full_width %} slider-component-full-width{% endif %}"
+      data-columns-mobile="{{ section.settings.columns_mobile }}"
+      data-columns-desktop="{{ section.settings.columns_desktop }}">
       
       <div class="swiper swiper-container">
       <div class="swiper-wrapper">
@@ -239,21 +241,9 @@
       "id": "columns_desktop",
       "min": 1,
       "max": 6,
-      "step": 1,
+      "step": 0.5,
       "default": 4,
       "label": "t:sections.featured-collection.settings.columns_desktop.label"
-    },
-        {
-      "type": "checkbox",
-      "id": "enable_desktop_slider",
-      "label": "t:sections.featured-collection.settings.enable_desktop_slider.label",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "t:sections.featured-collection.settings.full_width.label",
-      "default": false
     },
     {
       "type": "checkbox",
@@ -261,6 +251,12 @@
       "default": true,
       "label": "t:sections.featured-collection.settings.show_view_all.label",
       "info": "t:sections.featured-collection.settings.show_view_all.info"
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "View All Text",
+      "default": "See more",
     },
     {
       "type": "select",
@@ -413,20 +409,10 @@
       ]
     },    
     {
-      "type": "checkbox",
-      "id": "swipe_on_mobile",
-      "default": false,
-      "label": "t:sections.featured-collection.settings.swipe_on_mobile.label"
-    },          
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
@@ -436,7 +422,7 @@
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 100,
+      "max": 200,
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",

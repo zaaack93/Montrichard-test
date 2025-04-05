@@ -32,6 +32,9 @@ var SwiperComponent = /*#__PURE__*/function (_HTMLElement) {
     _classCallCheck(this, SwiperComponent);
     _this = _super.call(this); // Call the parent class constructor
     _this.section = _this.querySelector('.swiper'); // Select the swiper element within the custom element
+    // Retrieve the number of columns from data attributes
+    _this.columnsMobile = _this.getAttribute('data-columns-mobile') || 1;
+    _this.columnsDesktop = _this.getAttribute('data-columns-desktop') || 3.5;
     return _this;
   }
 
@@ -41,13 +44,9 @@ var SwiperComponent = /*#__PURE__*/function (_HTMLElement) {
     value: function connectedCallback() {
       var _this2 = this;
       this.initSwiper(); // Initialize the Swiper when the component is connected
-
+      this.adjustSectionWidth();
       window.addEventListener('resize', function () {
         _this2.adjustSectionWidth(); // Adjust the section width on window resize
-      });
-
-      window.addEventListener('load', function () {
-        _this2.adjustSectionWidth(); // Adjust the section width on window load
       });
     }
   }, {
@@ -76,7 +75,7 @@ var SwiperComponent = /*#__PURE__*/function (_HTMLElement) {
       var swiperOptions = {
         spaceBetween: 33,
         // Space between slides
-        slidesPerView: 1,
+        slidesPerView: parseFloat(this.columnsMobile),
         // Show 1 slide per view on screens 768px and larger
         navigation: {
           nextEl: ".swiper-button-next",
@@ -88,7 +87,7 @@ var SwiperComponent = /*#__PURE__*/function (_HTMLElement) {
         },
         breakpoints: {
           768: {
-            slidesPerView: 3.5,
+            slidesPerView: parseFloat(this.columnsDesktop),
             // Show 1 slide per view on screens 768px and larger
             spaceBetween: 25
           }
@@ -102,7 +101,6 @@ var SwiperComponent = /*#__PURE__*/function (_HTMLElement) {
     value: function disconnectedCallback() {
       // Remove the event listeners when the component is disconnected
       window.removeEventListener('resize', this.adjustSectionWidth);
-      window.removeEventListener('load', this.adjustSectionWidth);
     }
   }]);
   return SwiperComponent;
